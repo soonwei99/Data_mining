@@ -8,3 +8,4 @@ matplotlib
 sklearn
 mlxtend
 boruta
+tqdm
