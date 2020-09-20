@@ -77,12 +77,12 @@ if (option ==  'Data Mining Project'):
     if (option == 'Before'):
         df.isna().sum().plot(kind = 'bar'), plt.title('Columns With Null Data')
         st.pyplot()
-        st.set_option('deprecation.showPyplotGlobalUse', False)
+        
 
     elif(option == 'After'):
         cleandf.isna().sum().plot(kind = 'bar'), plt.title('After Cleaning')
         st.pyplot()
-        st.set_option('deprecation.showPyplotGlobalUse', False)
+        
        
         
     st.write("""
@@ -125,7 +125,7 @@ if (option ==  'Data Mining Project'):
     elif (option == 'Date'):
         cleandf['Date'].value_counts().plot(kind = 'bar'), plt.title('Which day customer are most likey to come')
         st.pyplot()
-        st.set_option('deprecation.showPyplotGlobalUse', False)
+        
         
     option = st.selectbox(
          'What Categories would you like to view from the data?',
@@ -179,7 +179,7 @@ if (option ==  'Data Mining Project'):
             table = pd.crosstab(cleandf['Basket_Size'], cleandf['With_Kids'])
             table.plot(kind = 'bar'), plt.title('BasketSize vs Kids'), plt.legend(bbox_to_anchor=(1.35, 1))
             st.pyplot()
-            st.set_option('deprecation.showPyplotGlobalUse', False)
+            
      
 
 
