@@ -34,6 +34,8 @@ import imblearn
 import warnings
 warnings.filterwarnings('ignore')
 
+st.set_option('deprecation.showPyplotGlobalUse', False)
+
 df = pd.read_csv('Laundry_Data.csv')
 cleandf = pd.read_csv('export_dataframe.csv')
 
