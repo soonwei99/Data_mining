@@ -4,7 +4,6 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
-import missingno as msno
 import pickle
 from sklearn.preprocessing import LabelEncoder
 from mlxtend.frequent_patterns import association_rules
