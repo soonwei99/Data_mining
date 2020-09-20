@@ -9,5 +9,4 @@ sklearn
 mlxtend
 boruta
 tqdm
-kmodes
 warnings
