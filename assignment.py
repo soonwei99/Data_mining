@@ -34,7 +34,6 @@ import imblearn
 import warnings
 warnings.filterwarnings('ignore')
 
-st.set_option('deprecation.showPyplotGlobalUse', False)
 
 df = pd.read_csv('Laundry_Data.csv')
 cleandf = pd.read_csv('export_dataframe.csv')
@@ -50,7 +49,7 @@ cleandf['Washer'] = pd.cut(cleandf['Washer_No'],4,labels=['three','four','five',
 cleandf['Age_Category'] = pd.cut(cleandf['Age_Range'],3,labels=["26-35", "36-45", "46-55"])
 cleandf['Time_Category'] = pd.cut(cleandf['Time'],4,labels=['mid_night','morning','afternoon','night'])
 
-
+st.set_option('deprecation.showPyplotGlobalUse', False)
 option = st.sidebar.selectbox(
     'Which number do you like best?', ('Data Mining Project', 'Feature Selection' , 'Classification Modeling' ,'Clustering'))
      
