@@ -10,5 +10,4 @@ mlxtend
 boruta
 tqdm
 kmodes
-imblearn
 warnings
