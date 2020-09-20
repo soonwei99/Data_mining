@@ -77,10 +77,12 @@ if (option ==  'Data Mining Project'):
     if (option == 'Before'):
         df.isna().sum().plot(kind = 'bar'), plt.title('Columns With Null Data')
         st.pyplot()
+        st.set_option('deprecation.showPyplotGlobalUse', False)
 
     elif(option == 'After'):
         cleandf.isna().sum().plot(kind = 'bar'), plt.title('After Cleaning')
         st.pyplot()
+        st.set_option('deprecation.showPyplotGlobalUse', False)
        
         
     st.write("""
