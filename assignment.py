@@ -100,7 +100,7 @@ if (option ==  'Data Mining Project'):
     if (option == 'Time'):
         cleandf['Time'].value_counts().plot(kind = 'bar'), plt.title('Time of customer visit to launderettes')
         st.pyplot()
-        st.set_option('deprecation.showPyplotGlobalUse', False)
+        
         
     elif (option == 'Age_Category'):
         cleandf['Age_Category'].value_counts().plot(kind = 'bar'), plt.title('Age Range of customer')
@@ -137,7 +137,7 @@ if (option ==  'Data Mining Project'):
             table = pd.crosstab(cleandf['Time_Category'], cleandf['Race'])
             table.plot(kind = 'bar'), plt.title('Time vs Race'), plt.legend(bbox_to_anchor=(1.05, 1))
             st.pyplot()
-            st.set_option('deprecation.showPyplotGlobalUse', False)
+          
 
     elif (option == 'Day vs Time'):
             table = pd.crosstab(cleandf['Date'], cleandf['Time_Category'])
@@ -179,6 +179,7 @@ if (option ==  'Data Mining Project'):
             table = pd.crosstab(cleandf['Basket_Size'], cleandf['With_Kids'])
             table.plot(kind = 'bar'), plt.title('BasketSize vs Kids'), plt.legend(bbox_to_anchor=(1.35, 1))
             st.pyplot()
+            st.set_option('deprecation.showPyplotGlobalUse', False)
             
      
 
