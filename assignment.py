@@ -49,7 +49,6 @@ cleandf['Washer'] = pd.cut(cleandf['Washer_No'],4,labels=['three','four','five',
 cleandf['Age_Category'] = pd.cut(cleandf['Age_Range'],3,labels=["26-35", "36-45", "46-55"])
 cleandf['Time_Category'] = pd.cut(cleandf['Time'],4,labels=['mid_night','morning','afternoon','night'])
 
-st.set_option('deprecation.showPyplotGlobalUse', False)
 option = st.sidebar.selectbox(
     'Which number do you like best?', ('Data Mining Project', 'Feature Selection' , 'Classification Modeling' ,'Clustering'))
      
@@ -136,41 +135,49 @@ if (option ==  'Data Mining Project'):
             table = pd.crosstab(cleandf['Time_Category'], cleandf['Race'])
             table.plot(kind = 'bar'), plt.title('Time vs Race'), plt.legend(bbox_to_anchor=(1.05, 1))
             st.pyplot()
+            st.set_option('deprecation.showPyplotGlobalUse', False)
 
     elif (option == 'Day vs Time'):
             table = pd.crosstab(cleandf['Date'], cleandf['Time_Category'])
             table.plot(kind = 'bar'), plt.title('Day vs Time'), plt.legend(bbox_to_anchor=(1.35, 1))
             st.pyplot()
+            st.set_option('deprecation.showPyplotGlobalUse', False)
 
     elif (option == 'Race vs Basket Size'):
             table = pd.crosstab(cleandf['Race'], cleandf['Basket_Size'])
             table.plot(kind = 'bar'), plt.title('Race vs Basket Size'), plt.legend(bbox_to_anchor=(1.35, 1))
             st.pyplot()
+            st.set_option('deprecation.showPyplotGlobalUse', False)
 
     elif (option == 'Time vs Age'):
             table = pd.crosstab(cleandf['Time_Category'], cleandf['Age_Category'])
             table.plot(kind = 'bar'), plt.title('Time vs Age'), plt.legend(bbox_to_anchor=(1.35, 1))
             st.pyplot()
+            st.set_option('deprecation.showPyplotGlobalUse', False)
 
     elif (option == 'Time vs Gender'):
             table = pd.crosstab(cleandf['Time_Category'], cleandf['Gender'])
             table.plot(kind = 'bar'), plt.title('Time vs Gender'), plt.legend(bbox_to_anchor=(1.35, 1))
             st.pyplot()
+            st.set_option('deprecation.showPyplotGlobalUse', False)
 
     elif (option == 'Time vs Kids'):
             table = pd.crosstab(cleandf['Time_Category'], cleandf['With_Kids'])
             table.plot(kind = 'bar'), plt.title('Time vs Kids'), plt.legend(bbox_to_anchor=(1.35, 1))
             st.pyplot()
+            st.set_option('deprecation.showPyplotGlobalUse', False)
 
     elif (option == 'Kids vs Gender'):
             table = pd.crosstab(cleandf['With_Kids'], cleandf['Gender'])
             table.plot(kind = 'bar'), plt.title('Kids vs Gender'), plt.legend(bbox_to_anchor=(1.35, 1))
             st.pyplot()
+            st.set_option('deprecation.showPyplotGlobalUse', False)
 
     elif (option == 'BasketSize vs Kids'):
             table = pd.crosstab(cleandf['Basket_Size'], cleandf['With_Kids'])
             table.plot(kind = 'bar'), plt.title('BasketSize vs Kids'), plt.legend(bbox_to_anchor=(1.35, 1))
             st.pyplot()
+            st.set_option('deprecation.showPyplotGlobalUse', False)
      
 
 
