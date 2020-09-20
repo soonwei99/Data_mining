@@ -8,4 +8,3 @@ matplotlib
 sklearn
 mlxtend
 boruta
-warnings
