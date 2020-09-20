@@ -4,8 +4,8 @@ streamlit==0.60.0
 xlrd==1.2.0
 yfinance
 seaborn
+cPickle
 matplotlib
-pickle
 sklearn
 mlxtend
 boruta
